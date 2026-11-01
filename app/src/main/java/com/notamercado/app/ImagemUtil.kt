@@ -1,4 +1,4 @@
-cr.openInputStream(uri)?.use { BitmapFactory.decodpackage com.notamercado.app
+package com.notamercado.app
 
 import android.content.Context
 import android.graphics.Bitmap
