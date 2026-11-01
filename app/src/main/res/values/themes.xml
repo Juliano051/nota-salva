@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NotaMercado" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#C8E6C9</item>
+        <item name="colorOnPrimaryContainer">#0B2E0E</item>
+    </style>
+</resources>

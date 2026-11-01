@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cupom fiscal com borda serrilhada e linhas de itens -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,30 L70,30 L70,78 L66,74 L62,78 L58,74 L54,78 L50,74 L46,78 L42,74 L38,78 Z" />
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M43,38 h22 v3 h-22 z M43,45 h22 v3 h-22 z M43,52 h14 v3 h-14 z M43,61 h22 v4 h-22 z" />
+</vector>
