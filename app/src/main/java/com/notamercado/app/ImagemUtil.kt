@@ -1,4 +1,4 @@
-package com.notamercado.app
+cr.openInputStream(uri)?.use { BitmapFactory.decodpackage com.notamercado.app
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -17,8 +17,9 @@ object ImagemUtil {
     fun reduzir(ctx: Context, uri: Uri, maxLado: Int = 2000): Bitmap {
         val cr = ctx.contentResolver
         val limites = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-        cr.openInputStream(uri)?.use { BitmapFactory.decodeStream(it, null, limites) }
-            ?: throw IOException("Não foi possível abrir a imagem")
+        val entrada = cr.openInputStream(uri) ?: throw IOException("Não foi possível abrir a imagem")
+        entrada.use { BitmapFactory.decodeStream(it, null, limites) }
+        if (limites.outWidth <= 0 || limites.outHeight <= 0) throw IOException("Formato de imagem não reconhecido")
         var amostra = 1
         while (max(limites.outWidth, limites.outHeight) / (amostra * 2) >= maxLado) amostra *= 2
 
