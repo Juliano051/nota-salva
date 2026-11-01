@@ -347,7 +347,7 @@ class MainActivity : AppCompatActivity() {
                 val r = withContext(Dispatchers.IO) { chamar(Request.Builder().url(u).get().build()) }
                 if (r.optBoolean("ok")) mostrarResumo(r) else tvMesInfo.text = r.optString("msg")
             } catch (e: IOException) {
-                tvMesInfo.text = "Sem conexão com a planilha"
+                tvMesInfo.text = "Erro: ${e.message ?: e.javaClass.simpleName}"
             }
         }
     }
